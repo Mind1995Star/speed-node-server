@@ -8,7 +8,7 @@ exports.addAddress = async (req, res) => {
       if (data) {
         console.log("Address already exists");
         // errors.address = "Address already exists";
-        return res.status(400).send("Failed");
+        return res.status(200).send("Address already exists");
       } else {
         const newAddress = new MetamaskModel({
           address: walletAddress,

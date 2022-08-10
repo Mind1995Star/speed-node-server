@@ -6,7 +6,7 @@ exports.addAddress = async (req, res) => {
     WalletModel.findOne({ address: walletAddress }).then((data) => {
       if (data) {
         console.log("Address already exists");
-        return res.status(400).send("Failed");
+        return res.status(200).send("Address already exists");
       } else {
         const newAddress = new WalletModel({
           address: walletAddress,
