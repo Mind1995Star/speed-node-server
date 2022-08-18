@@ -5,6 +5,7 @@ const walletRoute = require("../routes/wallet.route");
 
 const app = express();
 
+// app.use(METAMASK_PREFIX, metamaskRoute);
 app.use(METAMASK_PREFIX, metamaskRoute);
 app.use(WALLET_PREFIX, walletRoute);
 
